@@ -7,11 +7,11 @@
 while True:
     try:
         user_code = input("Please enter your ID ")
-
+        int(user_code)
         if len(user_code) != 11:
             raise UserWarning
             raise ValueError
-            user_code = int(user_code)
+
 
     except ValueError:
         print("ID code you entered is not numeric")
@@ -83,12 +83,12 @@ while True:
 
             if control_num % 11 == int(user_code[10]) :
                 print("Your ID is correct")
-            elif control_num % 11 > 10:
+            elif control_num % 11 == 10 or control_num == 0:
                 y = int(user_code[0]) * 3 + int(user_code[1]) * 4 + int(user_code[2]) * 5 + int(user_code[3]) * 6 \
                 + int(user_code[4]) * 7 + int(user_code[5]) * 8 + int(user_code[6]) * 9 + int(user_code[7]) * 1 \
                 + int(user_code[8]) * 2 + int(user_code[9]) * 3
 
-                print("Your ID is correct")
+                print("Your ID is correct 2")
             else:
                 print("Id you entered is not correct")
 
